@@ -17,14 +17,14 @@ class ProjectTableSeeder extends Seeder
      */
     public function run()
     {
-        $projects = Project :: factory() -> count(10) -> create();
+        $projects = Project :: factory() -> count(20) -> make();
 
-        // foreach ($projects as $project) {
+        foreach ($projects as $project) {
 
-        //     $type = Type :: inRandomOrder() -> first();
+            $type = Type :: inRandomOrder() -> first();
 
-        //     $project -> type_id = $type -> id;
-        //     $project -> save();
-        // }
+            $project -> type_id = $type -> id;
+            $project -> save();
+        }
     }
 }

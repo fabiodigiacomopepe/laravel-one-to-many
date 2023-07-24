@@ -34,4 +34,4 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/show/{id}', [PageController::class, 'show'])->middleware(['auth', 'verified'])-> name('auth.show');
+Route::get('/show/{id}', [PageController::class, 'show'])-> name('auth.show');

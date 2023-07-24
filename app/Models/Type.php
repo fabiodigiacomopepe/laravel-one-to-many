@@ -13,4 +13,8 @@ class Type extends Model
         "tipo",
         "di_gruppo"
     ];
+
+    public function project() {
+        return $this -> hasMany(Project :: class);
+    }
 }

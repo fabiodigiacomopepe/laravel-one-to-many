@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Models\Project;
+use App\Models\Type;
 
 class PageController extends Controller
 {
@@ -19,7 +20,8 @@ class PageController extends Controller
     public function show($id) {
 
         $project = Project::findOrFail($id);
+        $types = Type::all();
 
-        return view('auth.show', compact('project'));
+        return view('auth.show', compact('project', 'types'));
     }
 }

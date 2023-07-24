@@ -13,6 +13,11 @@ class Project extends Model
         "nome",
         "framework",
         "versione",
-        "deployato"
+        "deployato",
+        "type_id"
     ];
+
+    public function types() {
+        return $this -> belongsTo(Type :: class);
+    }
 }
